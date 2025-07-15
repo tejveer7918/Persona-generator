@@ -1,0 +1,28 @@
+{
+  "persona_name": "Skeptical Observer",
+  "demographics": {
+    "age": "Likely adult (based on commenting on content from 2012)",
+    "location": "Unknown",
+    "occupation": "Unknown"
+  },
+  "psychographics": {
+    "personality": "Skeptical, possibly humorous, values authenticity.",
+    "interests": "Humor, art (based on commenting on a drawing), pop culture (reference to Snoop Dogg)",
+    "values": "Authenticity and truth."
+  },
+  "goals": {
+    "reddit": "Engage with funny content, possibly connect with others through shared humor.",
+    "overall": "Unknown, but possibly to find amusement and lighthearted content."
+  },
+  "frustrations": {
+    "reddit": "Potential for inauthenticity or fake accounts on Reddit, leading to a need to verify user claims.",
+    "overall": "Unknown, but suggested by their comment the spread of fake accounts."
+  },
+  "reddit_usage": {
+    "activity": "Commenter",
+    "subreddits": "r/funny",
+    "style": "Brief, direct, and questioning (or confirming) authenticity."
+  },
+  "quote": "Yes, I'm real.",
+  "avatar_url": "https://www.redditstatic.com/avatars/defaults/v2/avatar_default_0.png"
+}

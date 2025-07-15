@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem;
+    }
+    .photo-section {
+      width: 30%;
+      padding-right: 2rem;
+    }
+    .photo-section img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .info-section {
+      width: 70%;
+    }
+    h1 {
+      color: #d54f00;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      color: #d54f00;
+      margin-top: 2rem;
+    }
+    .traits, .motivations, .personality {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .block {
+      background-color: #f4f4f4;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      margin: 0.2rem 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="photo-section">
+    <img src="{{ photo_url }}" alt="Profile Picture" />
+    <blockquote style="background: #f26000; color: white; padding: 1rem; border-radius: 6px; font-style: italic;">
+      “{{ quote }}”
+    </blockquote>
+  </div>
+
+  <div class="info-section">
+    <h1>{{ name }}</h1>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Occupation:</strong> {{ occupation }}</p>
+    <p><strong>Status:</strong> {{ status }}</p>
+    <p><strong>Location:</strong> {{ location }}</p>
+    <p><strong>Tier:</strong> {{ tier }}</p>
+    <p><strong>Archetype:</strong> {{ archetype }}</p>
+
+    <h2>Motivations</h2>
+    <div class="motivations">
+      {% for m in motivations %}
+        <div class="block">{{ m }}</div>
+      {% endfor %}
+    </div>
+
+    <h2>Personality</h2>
+    <div class="personality">
+      {% for p in personality %}
+        <div class="block">{{ p }}</div>
+      {% endfor %}
+    </div>
+
+    <h2>Behaviour & Habits</h2>
+    <ul>
+      {% for b in behaviour %}
+        <li>{{ b }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Frustrations</h2>
+    <ul>
+      {% for f in frustrations %}
+        <li>{{ f }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Goals & Needs</h2>
+    <ul>
+      {% for g in goals %}
+        <li>{{ g }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
