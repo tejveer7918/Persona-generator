@@ -1,4 +1,3 @@
-# backend/process_persona.py
 
 import json
 import requests
@@ -66,7 +65,6 @@ def generate_persona(raw_path: Path) -> dict:
 
     persona = _call_gemini(raw_data)
 
-    # ✅ Attach avatar from Reddit
     persona["avatar_url"] = raw_data.get("avatar_url", "https://via.placeholder.com/300")
 
     save_json(persona, persona_path)
