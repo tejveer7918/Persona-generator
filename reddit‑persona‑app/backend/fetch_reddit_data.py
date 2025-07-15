@@ -1,10 +1,3 @@
-"""
-backend/fetch_reddit_data.py
-Scrapes a Reddit user’s recent submissions & comments with PRAW,
-converts each item to a JSON‑serialisable dict, and caches the result
-in data/<username>_raw.json
-"""
-
 from pathlib import Path
 from urllib.parse import urlparse
 import praw
@@ -18,7 +11,6 @@ from backend.utils import save_json
 POST_LIMIT = 50  # number of submissions & comments to fetch
 
 
-# ---------- helpers -------------------------------------------------
 def _username(profile_url: str) -> str:
     parts = urlparse(profile_url).path.strip("/").split("/")
     if "user" in parts:
@@ -39,7 +31,6 @@ def _safe_dict(obj) -> dict:
     }
 
 
-# ---------- main scraper -------------------------------------------
 def fetch_reddit_data(profile_url: str, cache_dir: Path) -> Path:
     """
     Fetches data, caches it, and returns the path to the cached JSON file.
