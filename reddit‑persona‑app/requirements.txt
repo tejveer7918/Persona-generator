@@ -5,3 +5,4 @@ praw
 google-generativeai
 python-dotenv
 requests
+html2image
